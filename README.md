@@ -1,1 +1,1 @@
-# documentation
+Documentation for cybersecurity projects.

@@ -7,7 +7,7 @@ C:\folder1\app.exe %*
 
 # Pass the batch file into the PATH environment variable:
 ```
-setx PATH "%PATH%;C:\folder1\app.exe" /M
+setx PATH "%PATH%;C:\folder1\batch.bat" /M
 ```
 
 # You can now access the executable through your alias, with arguments if need be.

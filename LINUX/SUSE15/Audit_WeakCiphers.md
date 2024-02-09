@@ -1,3 +1,6 @@
+## Applicability: Servers, Workstations
+<br>
+
 # Audit for weak ciphers
 Audit for the current ciphers being used using the following command:
 

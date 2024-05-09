@@ -1,4 +1,5 @@
-## EXAMPLE: Finds PowerShell execution events that could involve a download
+## EXAMPLE: 
+## Finds PowerShell execution events that could involve a download
 ```
 union DeviceProcessEvents, DeviceNetworkEvents
 | where Timestamp > ago(7d)

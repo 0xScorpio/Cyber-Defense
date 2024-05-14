@@ -1,10 +1,18 @@
 ### Check for replication issues between domain controllers
+![image](https://github.com/0xScorpio/Cyber-Defense/assets/140411254/b8a48b09-2ea1-4801-b7f5-09d77b90d1ff)
 ```
 repadmin /showrepl
 ```
 ```
 repadmin /showsummary
 ```
+You will see two tables with stats, the first one is the Source DSA. These are the stats for the outgoing replications. The latter, Destination DSA are the incoming replications.
+
+The largest Delta tells us the longest time a connection between two domain controllers isn’t used. Now this can go up to 60 min, which is actually pretty normal. Within your domain, some changes are replicated within seconds, like password resets. But others, like schema changes, don’t happen that often and are only checked once per hour. The domain controllers check at least (pol) every hour for changes, so that is why the time can get up to 60 minutes.
+
+The field total shows the number of replication links the domain controller has. Fails tells us how many of those are failed (should be zero of course) and %% is the percentage of the failed links out of the total.
+
+When there is an error, then the error code is shown in the error field.
 
 ### DC Diagnostic tool
 DCDiag options go after the command and an optional identifier for a remote domain controller. You can get a list of them by entering dcdiag /? Or dcdiag /h. Here is the list:

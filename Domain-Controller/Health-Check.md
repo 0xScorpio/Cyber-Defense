@@ -47,3 +47,12 @@ For more diagnostic /test options:
 $Services='DNS','DFS Replication','Intersite Messaging','Kerberos Key Distribution Center','NetLogon',’Active Directory Domain Services’
 ForEach ($Service in $Services) {Get-Service $Service}
 ```
+
+### Event 4: Security-Kerberos
+The following situations can all cause a destination domain controller to submit Kerberos-encrypted traffic to the wrong Kerberos target:
+
+    Stale NTDS Settings objects
+    Bad name-to-IP mappings in DNS and WINS host records
+    Stale entries in HOST files
+
+To check for this condition, either take a network trace or manually verify that name DNS/NetBIOS name queries resolve to the intended target computer.

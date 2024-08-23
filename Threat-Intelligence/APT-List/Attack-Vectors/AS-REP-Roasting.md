@@ -15,4 +15,4 @@ It's worth noting that Pentera cannot leverage the user's 'stolen' TGT since it 
 	• Query all users with DONT_REQUIRE_PREAUTH using an LDAP query: 
 (&(samAccountType=805306368)(userAccountControl:1.2.840.113556.1.4.803:=4194304))
 If there are any, unset the attribute.
-Enforce password complexity in the domain environment.![image](https://github.com/user-attachments/assets/0790c5fa-9369-44b7-adae-dcf52080c736)
+Enforce password complexity in the domain environment.
